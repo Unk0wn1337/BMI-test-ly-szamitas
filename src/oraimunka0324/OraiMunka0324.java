@@ -18,6 +18,7 @@ public class OraiMunka0324 {
         int t = beker("Testtömeg (kg) [40,150]: ");
         double bmi = bmiSzamit(t , m);
         ertekeles(bmi, m , t);
+        koverVagyNem(bmi);
     }
     private static void ertekeles(double bmi,int m, int t) {
         String ki = "Ön.... %d cm; %d kg, %.2f BMI".formatted(m, t, bmi);
@@ -37,8 +38,22 @@ public class OraiMunka0324 {
           kiir(kerdes);
           return sc.nextInt();
       }
-    
-    }
 
+    private static void koverVagyNem(double bmi) {
+        if( bmi > 25 && bmi < 29.9){
+            System.out.println("\nvan feleslege");
+    }
+        if (bmi > 30) {
+            System.out.println("\ntulyosos van feleslege amit lekell dolgozni");
+        }
+        if(bmi < 25){
+            System.out.println("\nonnek megfelelo a bmi rataja");
+        }
+    }
+    
+      
 
 }
+
+
+
